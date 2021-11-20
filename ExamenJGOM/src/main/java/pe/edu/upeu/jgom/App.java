@@ -13,7 +13,7 @@ public class App{
     static void menuDeOpciones(){
 
         int f=lt2.leer(0,"\nLista de Algoritmos:"+"\n\n-Pregunta 2 : 1"+"\n-Pregunta 3 : 2"+
-        "\n-Pregunta 4 : 3"+"\n-Pregunta 5 : 4"+"\n-Para Cerrar El Algoritomo Introdusca el Numero: 0"+"\n\nIntrodusca el numero del algoritmo que desea Probar");
+        "\n-Pregunta 4 : 3"+"\n-Pregunta 5 : 4"+"\n-Para Cerrar El Menu de opciones Introduzca el Numero: 0"+"\n\nIntroduzca el numero del algoritmo que desea Probar");
         
         while(f!=0){
             switch(f){
@@ -23,8 +23,8 @@ public class App{
                         
                 case 3: res.numerosperfectos();break;
 
-                case 4: int x=lt2.leer(0,"Introdusca la base");
-                        int n=lt2.leer(0,"Introdusca el exponente");
+                case 4: int x=lt2.leer(0,"Introduzca la base");
+                        int n=lt2.leer(0,"Introduzca el exponente");
                         System.out.println("El resultado es: "+res.potencia(x, n));break;
                         
                 default: System.out.println("Elija un algoritmo existente!");   
@@ -32,7 +32,7 @@ public class App{
             }
             System.out.println("^^^^^^^^^^^^^^^^^^^^^^^^^^");
             f=lt2.leer(0,"\nLista de Algoritmos:"+"\n\n-Pregunta 2 : 1"+"\n-Pregunta 3 : 2"+
-            "\n-Pregunta 4 : 3"+"\n-Pregunta 5 : 4"+"\n-Para Cerrar El menu de opciones Introdusca el Numero: 0"+"\n\nIntrodusca el numero del algoritmo que desea Probar");
+            "\n-Pregunta 4 : 3"+"\n-Pregunta 5 : 4"+"\n-Para Cerrar El Menu de opciones Introduzca el Numero: 0"+"\n\nIntroduzca el numero del algoritmo que desea Probar");
 
         }
 

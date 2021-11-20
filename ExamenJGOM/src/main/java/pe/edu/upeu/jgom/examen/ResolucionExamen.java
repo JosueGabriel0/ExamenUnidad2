@@ -40,8 +40,6 @@ public class ResolucionExamen {
                     total = total + impuesto;
                 System.out.println("el impuesto a pagar por el auto: "+n+" es s/: "+impuesto);
                 }
-                //total = total + impuesto;
-                //System.out.println("el impuesto a pagar por el auto: "+n+" es s/: "+impuesto);
                 n--;
             }
             else
@@ -69,14 +67,14 @@ public class ResolucionExamen {
     public void numerosperfectos() {
         int i, j, suma;
         System.out.println("Números perfectos entre 1 y 1000: ");
-        for(i=1;i <= 1000;i++){      // i es el número que vamos a comprobar
+        for(i=1;i <= 1000;i++){     
             suma = 0;
-            for(j = 1;j < i;j++){    // j son los divisores. Se divide desde 1 hasta i-1                          
+            for(j = 1;j < i;j++){                          
                     if(i % j==0){
-                    suma = suma + j; // si es divisor se suma
+                    suma = suma + j; 
                     }
             }
-            if(i == suma){             // si el numero es igual a la suma de sus divisores es perfecto              
+            if(i == suma){                       
                 System.out.println(i);
             }
         }
