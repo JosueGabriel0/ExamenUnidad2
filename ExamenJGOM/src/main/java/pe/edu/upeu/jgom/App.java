@@ -21,11 +21,11 @@ public class App{
 
                 case 2: res.tablaDeMultiplicacionDel1Al20();break;
                         
-                case 3: res.numerosperfectos();break;
+                case 3: res.PrimerosNumerosPerfectos();break;
 
                 case 4: int x=lt2.leer(0,"Introduzca la base");
                         int n=lt2.leer(0,"Introduzca el exponente");
-                        System.out.println("El resultado es: "+res.potencia(x, n));break;
+                        System.out.println("El resultado de "+x+" con exponente "+n+" es: "+res.potenciaRecursivo(x, n));break;
                         
                 default: System.out.println("Elija un algoritmo existente!");   
 

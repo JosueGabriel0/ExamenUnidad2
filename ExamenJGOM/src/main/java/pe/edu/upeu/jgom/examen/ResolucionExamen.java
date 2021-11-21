@@ -64,30 +64,32 @@ public class ResolucionExamen {
             i++;
         }
     }
+
     //Pregunta 4:
-    public void numerosperfectos() {
-        int i, j, suma;
-        System.out.println("Números perfectos entre 1 y 1000: ");
-        for(i=1;i <= 1000;i++){     
+    public void PrimerosNumerosPerfectos() {
+        int r, c, suma;
+        System.out.println("Los Primeros números perfectos entre el 1 y 3000 Son: ");
+        for(r=1;r <= 3000;r++){      
             suma = 0;
-            for(j = 1;j < i;j++){                          
-                    if(i % j==0){
-                    suma = suma + j; 
-                    }
+            for(c = 1;c < r;c++){                              
+                 if(r % c==0){
+                    suma = suma + c; 
+                 }
             }
-            if(i == suma){                       
-                System.out.println(i);
-            }
+          if(r == suma){                           
+             System.out.println(r);
+          }
         }
     }
+
     //Pregunta 5:
-    public int potencia(int b, int e) {
-        if (e==1) {
-            return b;
-        } if (e==0) {
+    public int potenciaRecursivo(int l, int f) {
+        if (f==1) {
+            return l;
+        } if (f==0) {
             return 1;
         } else{
-            return b * potencia(b, e-1);
+            return l * potenciaRecursivo(l, f-1);
         }
 
     }
