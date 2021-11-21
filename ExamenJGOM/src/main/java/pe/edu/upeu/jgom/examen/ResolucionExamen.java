@@ -51,13 +51,17 @@ public class ResolucionExamen {
         } 
 
     //Pregunta 3:
-    public void TMultiplicar1hasta20() {
-        int n=1;
-        int m=20;
-        for (int i=n; i<=m; i++){
-            for(int j=1; j<=10; j++){
-                System.out.println(i+" x "+j+" = "+(i*j));
+    public void tablaDeMultiplicacionDel1Al20() {
+        int i=1, x=20, resultado=0;
+        
+        while(i<=x){
+            System.out.println("\n<--------Tabla de multiplicar del numero "+i+"-------->\n");
+            for(int p=1; p<=10; p++){
+                resultado=i*p;
+                System.out.println(i+" x "+p+" = "+resultado);
             }
+
+            i++;
         }
     }
     //Pregunta 4:

@@ -19,7 +19,7 @@ public class App{
             switch(f){
                 case 1: res.impuestosDeUnaCompañiaDeAutos();break;
 
-                case 2: res.TMultiplicar1hasta20();break;
+                case 2: res.tablaDeMultiplicacionDel1Al20();break;
                         
                 case 3: res.numerosperfectos();break;
 
