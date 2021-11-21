@@ -17,7 +17,7 @@ public class App{
         
         while(f!=0){
             switch(f){
-                case 1: res.impuestoAutos();break;
+                case 1: res.impuestosDeUnaCompañiaDeAutos();break;
 
                 case 2: res.TMultiplicar1hasta20();break;
                         

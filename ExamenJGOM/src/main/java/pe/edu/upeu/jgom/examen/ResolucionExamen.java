@@ -7,50 +7,47 @@ public class ResolucionExamen {
     LeerTeclado lt1 =new LeerTeclado();
     
     //Pregunta 2:
-    public void impuestoAutos() {
-        int n, clave;
-        float precio, impuesto, categoria1, categoria2, categoria3, total;
-        total = 0;
-        categoria1 = 0;
-        categoria2 = 0;
-        categoria3 = 0;
+    public void impuestosDeUnaCompañiaDeAutos(){
+        int x, i=1, tipoCategoria;
+        float impuestoAuto, autoPrecio, autoConCategoria1=0, autoConCategoria2=0, autoConCategoria3=0,totalImpuesto=0;
        
-        n =lt1.leer(0,"ingresar la cantidad de autos" );
-        while (n>0){
+        x=lt1.leer(0,"Ingrese el numero de Autos");
+        
+        while (i<=x){
             
-            precio =lt1.leer(0, "ingresa el precio del auto: "+n);
+            autoPrecio=lt1.leer(0,"Ingrese el Precio del Auto numero "+i);
             
-            clave =lt1.leer(0, "ingresa la clave del auto: ");
-            if (clave > 0 && clave<4){
-                if (clave ==1){
-                    impuesto = (precio*12)/100; 
-                    categoria1 = categoria1 + impuesto;
-                    total = total + impuesto;
-                System.out.println("el impuesto a pagar por el auto: "+n+" es s/: "+impuesto);
+            tipoCategoria=lt1.leer(0,"Ingrese la Categoria del Auto numero "+i);
+            if (tipoCategoria<=3 && tipoCategoria>=1){
+                if (tipoCategoria==1){
+                    impuestoAuto = (autoPrecio*12)/100; 
+                    autoConCategoria1 = autoConCategoria1 + impuestoAuto;
+                System.out.println("El Impuesto que debe pagar por el Auto numero "+i+" Es: "+impuestoAuto+"$");
                 }
-                if (clave ==2){
-                    impuesto = (precio*8)/100; 
-                    categoria2 = categoria2 + impuesto;
-                    total = total + impuesto;
-                System.out.println("el impuesto a pagar por el auto: "+n+" es s/: "+impuesto);
+                if (tipoCategoria==2){
+                    impuestoAuto = (autoPrecio*8)/100; 
+                    autoConCategoria2 = autoConCategoria2 + impuestoAuto;
+                System.out.println("El Impuesto que debe pagar por el Auto numero "+i+" Es: "+impuestoAuto+"$");
                 }
-                if (clave ==3){
-                    impuesto = (precio*5)/100; 
-                    categoria3 = categoria3 + impuesto;
-                    total = total + impuesto;
-                System.out.println("el impuesto a pagar por el auto: "+n+" es s/: "+impuesto);
+                if (tipoCategoria==3){
+                    impuestoAuto = (autoPrecio*5)/100; 
+                    autoConCategoria3 = autoConCategoria3 + impuestoAuto;
+                System.out.println("El Impuesto que debe pagar por el Auto numero "+i+" Es: "+impuestoAuto+"$");
                 }
-                n--;
             }
             else
-                System.out.println("ingrese la clave correcta");
-            
-        
+                System.out.println("Ingrese una Categoria Válida!");
+                
+                i++;
             }
-            System.out.println("el impuesto por la categoria 1 es s/: "+categoria1);
-            System.out.println("el impuesto por la categoria 2 es s/: "+categoria2);
-            System.out.println("el impuesto por la categoria 3 es s/: "+categoria3);
-            System.out.println("el impuesto total por todos los autos es s/: "+total);     
+
+            totalImpuesto=autoConCategoria1+autoConCategoria2+autoConCategoria3;
+            
+            System.out.println("--------------------------------------------------");
+            System.out.println("El Impuesto Total de los Autos con Categoria 1 Es: "+autoConCategoria1+"$");
+            System.out.println("El Impuesto Total de los Autos con Categoria 2 Es: "+autoConCategoria2+"$");
+            System.out.println("El Impuesto Total de los Autos con Categoria 3 Es: "+autoConCategoria3+"$");
+            System.out.println("El Impuesto Total por cada Categotia Y por todos los Autos Es: "+totalImpuesto+"$");     
         } 
 
     //Pregunta 3:
