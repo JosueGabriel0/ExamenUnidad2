@@ -67,18 +67,23 @@ public class ResolucionExamen {
 
     //Pregunta 4:
     public void PrimerosNumerosPerfectos() {
-        int r, c, suma;
+        int r=1, suma;
         System.out.println("Los Primeros números perfectos entre el 1 y 3000 Son: ");
-        for(r=1;r <= 3000;r++){      
-            suma = 0;
-            for(c = 1;c < r;c++){                              
+        while(r <= 3000){      
+            suma=0;
+            int c=1;
+            while(c < r){                              
                  if(r % c==0){
                     suma = suma + c; 
                  }
+
+                 c++;
             }
           if(r == suma){                           
              System.out.println(r);
           }
+         
+          r++;
         }
     }
 
