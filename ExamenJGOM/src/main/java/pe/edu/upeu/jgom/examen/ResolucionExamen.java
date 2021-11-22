@@ -67,19 +67,25 @@ public class ResolucionExamen {
 
     //Pregunta 4:
     public void PrimerosNumerosPerfectos() {
-        int r=1, suma;
+
+        int r=1, DivisoSumatoria;
+
         System.out.println("Los Primeros números perfectos entre el 1 y 3000 Son: ");
+        
         while(r <= 3000){      
-            suma=0;
+            DivisoSumatoria=0;
             int c=1;
-            while(c < r){                              
-                 if(r % c==0){
-                    suma = suma + c; 
+
+            while(c < r){    
+
+                 if(r % c == 0){
+                    DivisoSumatoria = DivisoSumatoria + c; 
                  }
 
                  c++;
             }
-          if(r == suma){                           
+
+          if(r == DivisoSumatoria){                           
              System.out.println(r);
           }
          
@@ -89,6 +95,7 @@ public class ResolucionExamen {
 
     //Pregunta 5:
     public int potenciaRecursivo(int l, int f) {
+
         if (f==1) {
             return l;
         } if (f==0) {
